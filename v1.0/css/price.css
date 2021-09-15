@@ -1,0 +1,132 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.navbar {
+  width: 100%;
+  height: 80px;
+  padding: 15px;
+  /* background-color:lightsteelblue; */
+  background-color: #0d3b66;
+  overflow: auto;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+.navbar img{
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-left: 20px;
+    margin-right: 50px;
+}
+.navbar a {
+  margin-left: 20px;
+  margin-right: 20px;
+  float: left;
+  padding: 12px;
+  /* color: black; */
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 5px;
+}
+.navbar a:hover {
+  background-color: grey;
+}
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+
+.baslik{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    background-color: #00adef;
+    top: 100px;
+    color: white;
+}
+.yazi{
+    position: relative;
+    margin: auto;
+    padding: 15px;
+    width: 75%;
+    top: 100px;
+    background-color: slategray;
+    color: white;
+    border-radius: 5px;
+}
+
+.tablolar{
+    position: relative;
+    margin: auto;
+    padding: 15px;
+    width: 75%;
+    top: 110px;
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 5px;
+}
+.tablolar h2{
+    margin-left: 180px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 75%;
+    margin-left: 170px;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+}
+  td{
+    border: 2px solid #ddd;
+
+  }
+  tr:nth-child(even){background-color: #f2f2f2}
+  
+  th {
+    background-color: #2174ba;
+    color: white;
+    border-top:  3px solid #ddd;
+
+  }
+
+.footer4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 80px;
+    top:110px;
+    background-color:steelblue;
+}
+.footer4 h4{
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+}
+.footer4 a{
+    text-decoration: none;
+    /* color: skyblue; */
+    color: #03e9f4;
+}

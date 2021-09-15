@@ -1,0 +1,65 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/css/sign-in.css">
+    <link rel="stylesheet" href="~/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <title>signin</title>
+</head>
+<body>
+    <div class="navbar">
+        <img src="~/images/256_256.png" alt="">
+        <a href="~/index/homepage"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="~/price/price"> <i class="fa fa-lira-sign"></i> Pricing</a>
+        <a href="~/whyus/whyus"><i class="fa fa-question"></i>  Why Us</a>
+        <a href="~/index/contact"><i class="fa fa-paper-plane"></i>  Contact Us</a>
+        <a href="~/index/download" style="float:right"><i class="fa fa-download"></i> Download</a>
+        @if (User.IsInRole("u"))
+        {
+            <a href="~/sign/upload/" style="float:right">Upload</a>
+            <a href="~/sign/signout" style="float:right">Sign out</a>
+        }
+        else
+        {
+            <a href="~/sign/signin" style="float:right"><i class="fa fa-fw fa-user"></i> Sign in</a>
+            <a href="~/sign/signup" style="float:right"><i class="fa fa-fw fa-user"></i> Sign up</a>
+        }
+    </div>
+    
+    <div class="login-box">
+        <h2>Login</h2>
+        <h2>@ViewBag.Mesaj</h2>
+    <form action="/sign/signin" method="post">
+        <div class="user-box">
+            <input type="email" name="mail" required="">
+            <label>Email</label>
+        </div>
+        <div class="user-box">
+            <input type="password" name="password" required="">
+            <label>Password</label>
+        </div>
+        <a href="#">
+            <button type="submit">Sign In</button>
+        </a>
+    </form>
+    </div>
+    <br>
+    <div class="footer5">
+        <div><h4>MyDrive</h4></div>
+        <div><h4><a href="~/index/kk">Kullanım Koşulları</a></h4></div>
+        <div><h4>MyDrive © 2020</h4></div>
+        <div><h4><i class="fa fa-globe-americas"></i>Türkçe</h4></div>
+    </div>
+
+</body>
+</html>

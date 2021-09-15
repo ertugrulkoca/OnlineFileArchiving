@@ -1,0 +1,25 @@
+﻿
+
+<h2 style="margin-left:20px;">User Files</h2>
+<br>
+<table>
+    <tr>
+        <th>UserID</th>
+        <th>Name</th>
+        <th>Size</th>
+        <th>İşlem</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.userid</td>
+            <td>@x.name</td>
+            <td>@x.size</td>
+            <td>
+                @Html.ActionLink("Delete", "deletefiles", "admin", new { id = @x.id }, new { onclick = "return confirm('Are you sure to delete?');" })
+            </td>
+        </tr>
+    }
+</table>
+
+

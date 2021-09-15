@@ -1,0 +1,17 @@
+﻿
+@{
+    Layout = null;
+}
+<table>
+    <tr>
+        <th>Subscription Terms</th>
+        <th>Monthly Payment(s)</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.subscription</td>
+            <td>@x.payment</td>
+        </tr>
+    }
+</table>

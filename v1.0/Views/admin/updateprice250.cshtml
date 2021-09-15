@@ -1,0 +1,52 @@
+﻿@model v1._0.Models.pricing250
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UpdatePrice250</title>
+</head>
+<body>
+    <div>
+        <h2>Update Price 250</h2>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="form-horizontal">
+                <h4>Price - 250</h4>
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.id)
+                <div class="form-group">
+                    <b class="control-label col-md-2">Subscription</b>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.subscription, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.subscription, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <br />
+                <div class="form-group">
+                    <b class="control-label col-md-2">Payment</b>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.payment, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.payment, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <br />
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Update Me" class="btn btn-success" />
+                    </div>
+                </div>
+            </div>
+        }
+        <br />
+        <div>
+            @Html.ActionLink("Back to List","price","admin")
+        </div>
+    </div>
+</body>
+</html>

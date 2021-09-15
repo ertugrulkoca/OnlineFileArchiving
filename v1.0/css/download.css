@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.navbar {
+    width: 100%;
+    height: 80px;
+    padding: 15px;
+    /* background-color:lightsteelblue; */
+    background-color: #0d3b66;
+    overflow: auto;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  }
+  .navbar img{
+      width: 40px;
+      height: 40px;
+      float: left;
+      margin-left: 20px;
+      margin-right: 50px;
+  }
+  .navbar a {
+    margin-left: 20px;
+    margin-right: 20px;
+    float: left;
+    padding: 12px;
+    /* color: black; */
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 5px;
+  }
+  .navbar a:hover {
+    background-color: grey;
+  }
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+  }
+
+
+  .fullekran{
+    width: 100%;
+    height: 900px;
+    background-color: #0b2a40;
+    color: white;
+  }
+  .sol{
+    position: relative;
+    top: 20%;
+    width: 40%;
+    margin-left: 200px;
+  }
+.sol h4{
+  line-height: 1.1875;
+  font-size: 32px;
+  font-weight: 400;
+  text-align: left;
+}
+.sol h1{
+  line-height: 0.87097;
+    font-size: 62px;
+    font-weight: 700;
+    text-align: left;
+}
+.sol p{
+  margin-top: 50px;
+  font-size: 20px;
+  line-height: 1.33;
+  font-weight: 300;
+  letter-spacing: .02em;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.sol a{
+  padding: 14px 36px;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 50px;
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-style: solid;
+  text-align: center;
+  cursor: pointer;
+  vertical-align: middle;
+  user-select: none;
+  transition: 250ms all ease-in-out;
+  border-width: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  font-family: Montserrat;
+  text-decoration: none;
+  color: #fff;
+  background-color: #00caff;
+  border-color: #00caff;
+}
+  .footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    bottom: 0;
+    background-color:steelblue;
+}
+.footer h4{
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+}
+.footer a{
+    text-decoration: none;
+    /* color: skyblue; */
+    color: #03e9f4;
+}

@@ -1,0 +1,16 @@
+﻿<table class="table table-bordered table-responsive table-hover">
+    <tr>
+        <th style="background-color: lightsteelblue;">Mail</th>
+        <th style="background-color: lightsteelblue;">Text</th>
+        <th style="background-color: lightsteelblue;">Operation</th>
+    </tr>
+    <br />
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.subscription</td>
+            <td>@x.payment</td>
+            <td>@Html.ActionLink("Update", "updateprice4tb", "admin", new { id = @x.id }, null)</td>
+        </tr>
+    }
+</table>

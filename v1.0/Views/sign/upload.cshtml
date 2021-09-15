@@ -1,0 +1,88 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/css/sign.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <title>upload</title>
+</head>
+<body>
+    <div class="navbar">
+        <img src="~/images/256_256.png" alt="">
+        <a href="~/index/homepage"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="~/price/price"> <i class="fa fa-lira-sign"></i> Pricing</a>
+        <a href="~/whyus/whyus"><i class="fa fa-question"></i>  Why Us</a>
+        <a href="~/index/contact"><i class="fa fa-paper-plane"></i>  Contact Us</a>
+
+        @if (User.IsInRole("u"))
+        {
+            <a href="~/sign/signout" style="float:right">Sign out</a>
+            <a href="~/sign/upload/" style="float:right">Upload</a>
+        }
+
+        else if (User.IsInRole("p"))
+        {
+            <a href="~/sign/signout" style="float:right">Sign out</a>
+            <a href="~/sign/upload/" style="float:right"><i class="fa fa-star"></i>Premium Upload </a>
+        }
+
+        else
+        {
+            <a href="~/sign/signin" style="float:right"><i class="fa fa-fw fa-user"></i> Sign in</a>
+            <a href="~/sign/signup" style="float:right"><i class="fa fa-fw fa-user"></i> Sign up</a>
+        }
+        <a href="~/index/download" style="float:right"><i class="fa fa-download"></i> Download</a>
+    </div>
+
+
+    <div class="upload" style="height:150px;">
+        @using (Html.BeginForm("upload", "sign", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+        {
+            <input type="text" placeholder="ID" name="userid" value="@Session["id"]" style="display: none;" required />
+            <input style=" display: inline-block; border: 1px solid #ccc; font-size: 25px; margin-top: 20px; margin-right: 40px; padding-top: 30px; padding-left: 25px; width: 450px; height: 100px; color: white;" id="up1" type="file" name="filepath" />
+            <input style=" margin-top: 45px; display: inline-block; width: 130px; height: 50px;" id="up2" type="submit" value="Kaydet" />
+        }
+    </div>
+
+    <div class="uploadlist">
+        <div class="tablolar">
+            <h2>DOSYALARIM</h2>
+            <h1 style="color:red; margin-left:35%;">@ViewBag.hata</h1>
+            <br>
+            <table>
+                <tr>
+                    <th>Files Name</th>
+                    <th>Size(MB)</th>
+                    <th>yüklenme tarihi</th>
+                    <th>İşlem</th>
+                    <th>Toplam alan(MB)</th>
+                    <th>Kalan Kullanım alanı(MB)</th>
+                </tr>
+                @foreach (var x in Model)
+                {
+                    <tr>
+                        <td>@x.name</td>
+                        <td>@x.size</td>
+                        <td>@x.date</td>
+                        <td>
+                            @Html.ActionLink("Delete", "deletefiles", "sign", new { id = @x.id }, new { onclick = "return confirm('Are you sure to delete?');" }) |
+                        @Html.ActionLink("Download", "download", "sign", new { id = @x.userid, name = @x.name }, new { onclick = "return confirm('Are you sure to download?');" })
+                    </td>
+                    <td>@ViewBag.fs</td>
+                    <td>@ViewBag.kalanalan</td>
+                </tr>
+            }
+            </table>
+        </div>
+    </div>
+</body>
+</html>

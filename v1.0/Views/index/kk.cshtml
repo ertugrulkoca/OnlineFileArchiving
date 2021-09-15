@@ -1,0 +1,110 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html  lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/css/whyus.css">
+    <link rel="stylesheet" href="~/css/kk.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <title>kk</title>
+</head>
+<body style="background-color: #cccbcb!important;">
+    <div class="navbar">
+        <img src="~/images/256_256.png" alt="">
+        <a href="~/index/homepage"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="~/price/price"> <i class="fa fa-lira-sign"></i> Pricing</a>
+        <a href="~/whyus/whyus"><i class="fa fa-question"></i>  Why Us</a>
+        <a href="~/index/contact"><i class="fa fa-paper-plane"></i>  Contact Us</a>
+
+        @if (User.IsInRole("u"))
+        {
+            <a href="~/sign/signout" style="float:right">Sign out</a>
+            <a href="~/sign/upload/" style="float:right">Upload</a>
+
+        }
+        else if (User.IsInRole("p"))
+        {
+            <a href="~/sign/signout" style="float:right">Sign out</a>
+            <a href="~/sign/upload/" style="float:right"><i class="fa fa-star"></i>Premium Upload </a>
+        }
+        else if (User.IsInRole("a"))
+        {
+            <a href="~/admin/admin" style="float:right"><i class="fa fa-fw fa-home"></i>Admin Page</a>
+        }
+        else
+        {
+            <a href="~/sign/signin" style="float:right"><i class="fa fa-fw fa-user"></i> Sign in</a>
+            <a href="~/sign/signup" style="float:right"><i class="fa fa-fw fa-user"></i> Sign up</a>
+        }
+        <a href="~/index/download" style="float:right"><i class="fa fa-download"></i> Download</a>
+    </div>
+
+    <div class="kullanimkosullari">
+        <h1>Kullanım Koşulları</h1>
+        <br>
+        <br>
+        <h2>∗ Bu Kullanım Koşulları sadece örnek olması amacıyla hazırlanmıştır. Herhangi bir web sitesi veya uygulama için özel olarak hazırlanmamış olup, herhangi bir web sitesi için uygunluğu, geçerliliği ve eksiksiz olması konusunda herhangi bir taahhütte bulunulmamakta ve sorumluluk kabul edilmemektedir. </h2>
+        <br>
+        <br>
+        <h3 class="a">Tanımlar</h3>
+        <br>
+        <br>
+        <p>
+            [•] Şirketi (“Şirket”) [•] alan isminde bulunan ve [•] uygulamasını sunan internet sitesi ve ona bağlı tüm sayfaların (“Site”) sahibidir.
+
+            Site’yi ve bu Site’de sunulan hizmetleri (“Hizmet(ler)”) kullanmak isteyenlerin (“Kullanıcılar”) Site’yi kullanmaya başlamadan önce bu Kullanım Şartları ve Site’de yer alan Gizlilik Politikası’nı dikkatlice okumaları gerekmektedir.
+
+            KULLANICILAR, SİTE’Yİ VE SİTE’DE VERİLEN HİZMETLERİ KULLANMAYA BAŞLAYARAK VE/VEYA SİTE’YE ÜYE OLARAK İŞBU KULLANIM ŞARTLARINI VE GİZLİLİK POLİTİKASINI OKUDUKLARINI, ANLADIKLARINI VE BUNLARLA BAĞLI OLDUKLARINI KABUL ETMİŞ OLURLAR. KULLANIM ŞARTLARI ARASINDA KABUL ETMEDİĞİNİZ MADDELER OLMASI HALİNDE SİTE’Yİ KULLANMAYI DERHAL SONLANDIRMALISINIZ.
+        </p>
+        <br>
+        <br>
+        <h3 class="b">Tanımlar</h3>
+        <br>
+        <br>
+        <h3 class="c">WEB SİTESİ</h3>
+        <br>
+        <br>
+        <H4 class="d">[WEB SİTESİ, VERİLEN HİZMET VE ÜYELİKLE iLE İLGİLİ AÇIKLAMA]</H4>
+        <br>
+        <br>
+        <h3 class="e">ÜYELİK</h3>
+        <br>
+        <br>
+        <P>
+            Her Kullanıcının sadece tek bir üyelik hesabı olabilir, aynı kişi birden fazla üyelik oluşturamaz.
+            Üyeler işbu Kullanım Koşullarına ve Web Sitesi’nde yayınlanmakta olan diğer tüm kurallara uyacaklarını kabul ve taahhüt ederler.
+            Üyeler tarafından yapılan paylaşımlar ve iletişimler hiçbir şekilde suç teşkil edecek, yasadışı, tehditkâr, rahatsız edici, hakaret, küfür veya iftira içeren, küçük düşürücü, kaba, pornografik ya da kamu düzenini bozucu, genel ahlaka aykırı, başkalarını rahatsız ve taciz edecek nitelikte, kişilik haklarına zarar verici, yasalara aykırı bir amaç için, başkalarının gizlilik hakkına, fikri ve telif haklarına, ticari marka hakları veya başka mülkiyet haklarına tecavüz edecek nitelikte olamaz.
+            Üyeler, Web Sitesi’ndeki profil sayfalarında aşağıdaki bilgileri eksiksiz olarak bulunduracaktır:
+        </P>
+        <br>
+        <br>
+        <h3 class="f">KULLANICILARIN UYMASI GEREKEN KURALLAR</h3>
+        <br>
+        <br>
+        <p>
+            Üyeler takma ad kullanmak dahil olmak üzere kimliği ve üyelik hesabını oluştururken verdiği bilgiler ile ilgili yanlış veya yanıltıcı beyanda bulunmayacağını kabul ve taahhüt eder.
+            Üyeler, kendileri tarafından belirlenmiş kullanıcı adı ve şifrelerini başka kişi ya da kuruluşlara veremezler. Üyelerin sahip oldukları kullanım hakkı sadece kendilerine aittir, başkalarına kullandırılamaz ve/veya devredilemez. Aksi halde Şirket’in söz konusu kullanımdan doğan tazmin hakkı saklıdır. Şirket bu şekilde aykırı kullandırmaları tespit ettiği üyelerin üyeliklerini hiçbir açıklama yapmaksızın askıya alabilir veya iptal edebilir. Üyelerin bu maddeye aykırı hareketi sebebiyle diğer üyelerin zarara uğraması halinde, bu zarardan ihlal eden üye sorumlu olacak ve Şirket’in hiçbir şekilde tazminat yükümlülüğü veya başka bir sorumluluğu olmayacaktır.
+            Üyeler profil sayfalarında Facebook, Linkedin veya Google+ gibi sosyal medya hesaplarına (“Sosyal Medya Hesapları”) bağlantı verebilir ve Sosyal Medya Hesaplarına erişim sağlayabilirler. Bu durumda üyeler Sosyal Medya Hesapları’nda paylaştıkları, sakladıkları veya erişilebilir kıldıkları bilgi, veri, mesaj, etiket ve benzeri unsurlara ilgili Sosyal Medya Hesapları’ndaki gizlilik ayarlarına uygun olarak Şirket ve diğer üyelerin erişimi olacağını kabul etmiş olurlar. Herhangi bir sosyal medya sitesinin Sosyal Medya Hesaplarının gizlilik ayarlarını ihlal etmesi halinde Şirket ilgili sosyal medya sitesinin bu ihlalinden her ne nam altında olursa olsun bir sorumluluk kabul etmemektedir.
+            Üyeler Web Sitesi’ye yükledikleri her tür içeriğin doğruluğunu, fotoğrafların kendilerine ait olduğunu, üçüncü kişi ve kuruluşları yanıltacak nitelikte herhangi bir içeriğe yer vermeyeceklerini, yayınlanan içeriklerin, Şirket ile hiçbir ilgi ve bağlantısı olmadığını ve sadece kendilerini bağlayacağını kabul ve taahhüt ederler.
+            Web Sitesi’nde sunulan hizmet, hiçbir şekilde suç teşkil edecek, yasadışı, tehditkâr, rahatsız edici, hakaret, küfür veya iftira içeren, küçük düşürücü, kaba, pornografik ya da kamu düzenini bozucu, genel ahlaka aykırı, başkalarını rahatsız ve taciz edecek şekilde, kişilik haklarına zarar verici, yasalara aykırı bir amaç için, başkalarının gizlilik hakkına, fikri ve telif haklarına, ticari marka hakları veya başka mülkiyet haklarına tecavüz edecek şekilde kullanılamaz.
+            Üyeler Web Sitesi’nin kullanımında tersine mühendislik yapmayacağını, kaynak kodunu bulmak veya elde etmek için başka bir işlemde bulunmayacağını aksi halde Şirket ve üçüncü  kişiler nezdinde doğacak zararlardan sorumlu olacaklarını peşinen kabul ederler.
+            (vii)Üyeler, Web Sitesi’ni kullanırken ve Web Sitesi içindeki iletişimlerinde genel ahlaka ve adaba aykırı, kanuna aykırı, üçüncü kişilerin haklarını zedeleyen, yanıltıcı, saldırgan, müstehcen, pornografik, kişilik haklarını zedeleyen, telif haklarına aykırı, yasa dışı faaliyetleri teşvik eden içerikler üretemez ve paylaşamazlar. Aksi halde Şirket bu Üyelerin üyeliklerini askıya alabilir, sona erdirebilir ve ilgili yasal süreçleri başlatabilir.
+        </p>
+    </div>
+
+    <div class="footer3">
+        <div><h4>MyDrive</h4></div>
+        <div><h4><a href="~/index/kk">Kullanım Koşulları</a></h4></div>
+        <div><h4>MyDrive © 2020</h4></div>
+        <div><h4><i class="fa fa-globe-americas"></i>Türkçe</h4></div>
+    </div>
+</body>
+</html>

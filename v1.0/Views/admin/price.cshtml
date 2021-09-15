@@ -1,0 +1,68 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <title>admin</title>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+        <h3 class="w3-bar-item">Menu</h3>
+        <a href="~/admin/user" class="w3-bar-item w3-button">Users Information</a>
+        <a href="~/admin/price" class="w3-bar-item w3-button">Price Details</a>
+        <a href="~/admin/admin" class="w3-bar-item w3-button">Messages</a>
+        <a href="~/admin/whyus" class="w3-bar-item w3-button">Why Us</a>
+        <a href="~/index/homepage" class="w3-bar-item w3-button">Home Page</a>
+        <a href="~/admin/adminloginout" class="w3-bar-item w3-button">Sign Out</a>
+    </div>
+
+    <!-- Page Content -->
+    <div style="margin-left:25%">
+
+        <div class="w3-container w3-teal">
+            <h1>Admin Page</h1>
+        </div>
+
+        <br />
+        <br />
+        <div class="w3-container">
+            <h3>Home/Pro Plan - 250 GB</h3>
+            <br>
+            <table class="table table-bordered table-responsive table-hover">
+                <tr>
+                    <th style="background-color: lightsteelblue;">Mail</th>
+                    <th style="background-color: lightsteelblue;">Text</th>
+                    <th style="background-color: lightsteelblue;">Operation</th>
+                </tr>
+                <br />
+                @foreach (var x in Model)
+                {
+                    <tr>
+                        <td>@x.subscription</td>
+                        <td>@x.payment</td>
+                        <td>@Html.ActionLink("Update", "updateprice250", "admin", new { id = @x.id }, null)</td>
+                    </tr>
+                }
+            </table>
+            <br>
+            <h3>Premium Plan - 1 TB</h3>
+            <br>
+            @Html.Action("price2", "admin")
+            <br />
+            <h3>Premium Plan - 4 TB</h3>
+            <br>
+            @Html.Action("price3", "admin")
+
+        </div>
+
+    </div>
+</body>
+</html>

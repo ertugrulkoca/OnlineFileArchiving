@@ -1,0 +1,60 @@
+﻿@model v1._0.Models.whyus
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>whyus</title>
+</head>
+<body>
+    <div>
+        <h2>Update Why Us</h2>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="form-horizontal">
+                <h4>Why Us</h4>
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.id)
+                <div class="form-group">
+                    <b class="control-label col-md-2">Başlık</b>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.baslik, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.baslik, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <br />
+                <div class="form-group">
+                    <b class="control-label col-md-2">Açıklama</b>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.aciklama, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.aciklama, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <br />
+                <div class="form-group">
+                    <b class="control-label col-md-2">Fotoğraf</b>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.images, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.images, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <br />
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Update Me" class="btn btn-success" />
+                    </div>
+                </div>
+            </div>
+        }
+        <br />
+        <div>
+            @Html.ActionLink("Back to List", "whyus", "admin")
+        </div>
+    </div>
+</body>
+</html>

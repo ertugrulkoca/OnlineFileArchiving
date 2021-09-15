@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FileArchivingModelStoreContainer" CdmEntityContainer="FileArchivingEntities">
+    <EntitySetMapping Name="adnnin">
+      <EntityTypeMapping TypeName="FileArchivingModel.adnnin">
+        <MappingFragment StoreEntitySet="adnnin">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="role" ColumnName="role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="contact">
+      <EntityTypeMapping TypeName="FileArchivingModel.contact">
+        <MappingFragment StoreEntitySet="contact">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="text" ColumnName="text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pricing1tb">
+      <EntityTypeMapping TypeName="FileArchivingModel.pricing1tb">
+        <MappingFragment StoreEntitySet="pricing1tb">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="subscription" ColumnName="subscription" />
+          <ScalarProperty Name="payment" ColumnName="payment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pricing250">
+      <EntityTypeMapping TypeName="FileArchivingModel.pricing250">
+        <MappingFragment StoreEntitySet="pricing250">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="subscription" ColumnName="subscription" />
+          <ScalarProperty Name="payment" ColumnName="payment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pricing4tb">
+      <EntityTypeMapping TypeName="FileArchivingModel.pricing4tb">
+        <MappingFragment StoreEntitySet="pricing4tb">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="subscription" ColumnName="subscription" />
+          <ScalarProperty Name="payment" ColumnName="payment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userfiles">
+      <EntityTypeMapping TypeName="FileArchivingModel.userfiles">
+        <MappingFragment StoreEntitySet="userfiles">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="size" ColumnName="size" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="filepath" ColumnName="filepath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="FileArchivingModel.users">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="premium" ColumnName="premium" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="whyus">
+      <EntityTypeMapping TypeName="FileArchivingModel.whyus">
+        <MappingFragment StoreEntitySet="whyus">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+          <ScalarProperty Name="images" ColumnName="images" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
